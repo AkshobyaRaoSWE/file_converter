@@ -108,7 +108,7 @@ export default function Home() {
           <div
             tabIndex={0}
             role="button"
-            className="btn m-1 btn-secondary  rounded-md"
+            className="btn m-1 btn-active rounded-md"
           >
             {output.toUpperCase()}
           </div>

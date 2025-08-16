@@ -23,6 +23,7 @@ export async function GET(req: Request) {
         { status: 500 }
       );
     }
+
     const exportTask = finishedJobs.tasks.find(
       (task) => task.name === "export" && task.status === "finished"
     );
@@ -33,11 +34,6 @@ export async function GET(req: Request) {
       return Response.json(
         {
           status: finishedJobs.status,
-          tasks: finishedJobs.tasks.map((t) => ({
-            name: t.name,
-            op: t.operation,
-            status: t.status,
-          })),
         },
         { status: 202 }
       );
