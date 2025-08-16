@@ -3,6 +3,7 @@ export const runtime = "nodejs";
 
 export async function GET(req: Request) {
   try {
+    const { apiKey } = await req.json();
     const { searchParams } = new URL(req.url);
     const jobID = searchParams.get("jobID");
     if (!jobID) {
